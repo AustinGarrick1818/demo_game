@@ -35,3 +35,7 @@ def addstr(x, y, msg):
 	line = int(x)
 	col = int(y)
 	init.addstr(line, col, msg)
+
+
+
+init = curses.initscr()
