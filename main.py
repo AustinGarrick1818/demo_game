@@ -38,4 +38,34 @@ def addstr(x, y, msg):
 
 
 
+# TODO: move this to gen_maps.py
+def gen_test_map():
+	# Generate a small map with grass and water
+	#
+	# Grass: '*'
+	# Water: '~'
+	# Mountains: '^'
+
+	# Start drawing grass
+	addstr(0, 0, "*")
+	refresh()
+	sleep(1)
+	addstr(0, 1, "*")
+	refresh()
+	sleep(1)
+	addstr(0, 2, "*")
+	refresh()
+	sleep(1)
+
+
+
+
 init = curses.initscr()
+curses.noecho()
+curses.cbreak()
+#init.keypad(True)
+
+
+gen_test_map()
+sleep(3)
+exit(0)
